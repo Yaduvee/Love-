@@ -1,0 +1,264 @@
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        Google Fonts  */
+
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+/* font-family: "Courgette", cursive; */
+
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+/* font-family: "Satisfy", cursive; */
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Courgette", cursive;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("background.jpeg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section .main_container {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+section .main_container h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 2.6rem;
+  color: crimson;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+  font-family: "Satisfy", cursive;
+  font-size: 2.6rem;
+  color: blue;
+
+}
+section .main_container h1 i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.3rem;
+}
+
+section .main_container .input_group {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+section .main_container .input_group img {
+  height: 2rem;
+  width: 2rem;
+}
+
+section .main_container .input_group input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+}
+
+section .main_container .input_group input::placeholder {
+  opacity: 0.6;
+}
+
+/* .button_container {
+  background-color: darkblue;
+} */
+
+.button_container button {
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  background-color: crimson;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+}
+
+.button_container button i {
+  margin-right: 0.3rem;
+}
+
+.button_container button:hover {
+  background-color: white;
+  color: crimson;
+  transition: 0.3s;
+}
+
+.output {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  transition: top 0.3s;
+}
+
+.output .main_container h1 {
+  color: black;
+  font-family: "Courgette", cursive;
+  font-size: 2rem;
+}
+
+.output .main_container h1 span {
+  color: crimson;
+}
+
+.output .main_container p {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.output .main_container p span {
+  font-size: 6rem;
+  color: crimson;
+}
+        
+        
+        
+        
+        
+    </style>
+    <link rel="shortcut icon" href="assets/love calculator favicon.png" type="image/x-icon">
+    <meta name="keywords" content="Love Calculator">
+   
+
+    <meta property="og:title" content="Love Calculator - Calculate Your Love" />
+    <meta property="og:url"
+        content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCUMqr2QTl6TiGK6KwZI5AqkRs64CnuWm0blj13aR7ulK8J5nSVKJNARon6D_tzbZte9G6eQ9cX1jrSyO-Ya5mhKJNgD4in1eZ5xIPRSiMhpa2OO1OG0rRg6OpywiylO6D2ONdu417DweCpMAlKhrIdaWS3pceg83ZYwpGSkbjwYrviUIJ3EkglX-y/s16000/love%20calculator.PNG" />
+    <meta property="og:image" content="assets/love calculator.PNG" />
+    <meta name="og:description"
+        content="Love Calculator is a very interesting tool that allows you to calculate your love score. Get the score of your love with love calculator and share it." />
+
+    <meta name="twitter:title" content="Love Calculator - Calculate Your Love">
+    <meta name="twitter:description"
+        content="Love Calculator is a very interesting tool that allows you to calculate your love score. Get the score of your love with love calculator and share it.">
+    <meta name="twitter:image" content="assets/love calculator.PNG">
+
+    <title>Love Calculator - Calculate Your Love</title>
+
+
+</head>
+
+<body>
+  
+    <section class="input">
+        <div class="main_container">
+            <h1><i class="bi bi-heart-half"></i> Love Calculator</h1>
+
+            <div class="input_group">
+                <img src="boy.png"
+                    alt="">
+                <input type="text" name="" id="boyfriend" placeholder="Name of Boyfriend">
+            </div>
+
+            <div class="input_group">
+                <img src="girl.png"
+                    alt="">
+                <input type="text" name="" id="girlfriend" placeholder="Name of Girlfriend">
+            </div>
+
+            <div class="button_container">
+                <button type="button" id="calculate_love"><i class="bi bi-heart-half"></i>Calculate Love</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="output">
+        <div class="main_container">
+            <h1>Love Score of</h1>
+            <h1><span id="output_boyfriend">boyfriend</span> and <span
+                    id="output_girlfriend">girlfriend</span></h1>
+
+            <p><span id="love_score">5</span>/10</p>
+            <div class="button_container">
+                <button type="button" id="go_back"><i class="bi bi-heart-half"></i>Go Back</button>
+            </div>
+            <h1><i class="bi bi-heart-half"></i>TIP: Your
+              love will be yours 
+               when <br> you are look handsome and beautiful</h1>
+            <a  href="https://mydukaan.io/kaunis"> use:kaunis.com  </a>
+        </div>
+        
+        
+        
+
+
+    </section>
+
+
+    <script >
+        
+        let boyfriend = document.getElementById('boyfriend');
+
+let girlfriend = document.getElementById('girlfriend');
+
+let calculate_btn = document.getElementById('calculate_love');
+
+let output_section = document.querySelector('.output');
+
+let music = new Audio('sun.mp3')
+
+let go_back = document.getElementById('go_back')
+
+let girlfriend_output = document.getElementById('output_girlfriend');
+
+let boyfriend_output = document.getElementById('output_boyfriend')
+
+let score_value = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+let love_score = document.getElementById('love_score')
+
+calculate_btn.onclick = () => {
+    if (boyfriend.value != "" && girlfriend.value != "") {
+        output_section.style.top = 0;
+        music.currentTime = 0;
+        music.play();
+        girlfriend_output.innerText = girlfriend.value;
+        boyfriend_output.innerText = boyfriend.value;
+        let random_score = Math.floor(Math.random() * score_value.length);
+        love_score.innerText = random_score;
+    }
+}
+
+go_back.onclick = () => {
+    output_section.style.top = "-100%";
+    music.currentTime = 0;
+    music.play();
+}
+        
+        
+        
+    </script>
+</body>
+
+</html>
